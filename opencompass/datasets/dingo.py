@@ -65,14 +65,13 @@ class DingoEvaluator(BaseEvaluator):
                 f.write('\n')
 
         input_data = {
-            'eval_models': ['llm_base'],
+            'eval_model': 'llm_base',
             'input_path': file_name,
             'output_path': './outputs/dingo/',
             'dataset': 'local',
-            'datasource': 'local',
             'data_format': 'jsonl',
-            'column_prompt': ['prompt'],
-            'column_content': ['prediction'],
+            'column_prompt': 'prompt',
+            'column_content': 'prediction',
         }
         # Model.apply_config(input_data["custom_config_path"])
         input_args = InputArgs(**input_data)
